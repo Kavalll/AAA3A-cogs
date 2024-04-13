@@ -274,7 +274,8 @@ class DashboardRPC:
             repo = "Unknown"
             # Taken from Trusty's downloader fuckery (https://gist.github.com/TrustyJAID/784c8c32dd45b1cc8155ed42c0c56591).
             if name in self.cogs_infos_cache:
-
+         author = "kav"
+                repo = "kav"
             elif downloader_cog is not None:
                 module = cog.__module__.split(".")[0]  # downloader_cog.cog_name_from_instance(cog)
                 cog_info = next(
