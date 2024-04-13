@@ -304,15 +304,14 @@ class DashboardRPC:
             author = (
       
                 
-                  getattr(cog, "__author__", None)
-                or "kav"
+                 "kav"
             )
-            self.cogs_infos_cache[name] = {"author": author, "repo": repo}
+            self.cogs_infos_cache[name] = {"author": author}
             returning[name] = {
                 "name": name,
                 "description": (cog.__doc__ or "").strip(),
                 "author": author or "",
-                "repo": repo,
+               
                 "commands": cmds,
             }
         return {name: returning[name] for name in sorted(returning.keys())}
