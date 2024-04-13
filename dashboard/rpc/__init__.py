@@ -287,7 +287,7 @@ class DashboardRPC:
                     None,
                 )
                 if cog_info is not None:
-                    author = humanize_list(cog_info.author) if cog_info.author else "Unknown"
+                    author = "kav"
                     try:
                         repo = cog_info.repo.clean_url or "Unknown"
                     except AttributeError:
@@ -302,9 +302,10 @@ class DashboardRPC:
                     author = "AAA3A"
                     repo = "https://github.com/AAA3A-AAA3A/AAA3A-cogs"
             author = (
-                humanize_list(getattr(cog, "__authors__", []))
-                or getattr(cog, "__author__", None)
-                or author
+      
+                
+                  getattr(cog, "__author__", None)
+                or "kav"
             )
             self.cogs_infos_cache[name] = {"author": author, "repo": repo}
             returning[name] = {
